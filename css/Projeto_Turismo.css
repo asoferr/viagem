@@ -1,4 +1,4 @@
-/* Estilos Gerais */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,17 +6,18 @@
 }
 
 body {
+    margin: 0;
+    padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f4f8; /* Cor de fundo suave */
-    color: #333;
-    line-height: 1.6;
-    text-align: center;
     position: relative;
-    min-height: 100vh;
-    overflow-x: hidden;
+    min-height: 100vh; /* Garante que o body tenha pelo menos a altura da tela */
+    overflow-x: hidden; /* Evita rolagem horizontal */
+    color: #333;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Contêiner da Imagem de Fundo */
+
 body::before {
     content: "";
     position: fixed;
@@ -30,62 +31,70 @@ body::before {
     filter: brightness(50%);
 }
 
-/* Estilo do Cabeçalho */
+
 header {
     background-color: rgba(0, 100, 0, 0.8); /* Cor verde escura com transparência */
     color: white;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+    z-index: 1; /* Garante que o cabeçalho fique acima da imagem de fundo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra sutil para destacar o cabeçalho */
+    border-bottom: 5px solid #004d00; /* Borda inferior para um efeito mais elegante */
 }
 
 header h1 {
-    margin-bottom: 10px;
-    font-size: 2.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra de texto para destaque */
+    margin: 0;
+    font-size: 2.5rem; /* Tamanho maior do título */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra de texto para mais destaque */
 }
 
-header nav a {
-    color: #e0f2f1;
+nav {
+    margin-top: 0.5rem;
+}
+
+nav a {
+    color: white;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 1.5rem;
     font-weight: bold;
-    font-size: 1.1rem;
-    transition: color 0.3s, text-shadow 0.3s;
+    font-size: 1.1rem; /* Fonte maior para links de navegação */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Transição suave para cor e sombra dos links */
 }
 
-header nav a:hover {
+nav a:hover {
     color: #ffcc00; /* Cor de destaque ao passar o mouse */
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
+ }
 
-/* Estilo do Conteúdo Principal */
+
 main {
     padding: 2rem;
     max-width: 1200px;
     margin: 2rem auto;
-    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com transparência */
-    border-radius: 15px; /* Cantos arredondados */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
+    background-color: rgba(255, 255, 255, 0.9); 
+    border-radius: 15px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
     position: relative;
     z-index: 1;
 }
 
-/* Títulos */
+
 h2 {
-    margin-bottom: 30px;
-    color: #2c6e49;
-    font-size: 2rem;
-    border-bottom: 3px solid #2c6e49;
-    padding-bottom: 0.5rem;
-    font-family: 'Georgia', serif;
+    color: #006400; /* Cor verde escura para os títulos */
+    margin-bottom: 1rem;
+    font-size: 2rem; /* Tamanho do título */
+    border-bottom: 3px solid #006400; /* Linha decorativa abaixo do título */
+    padding-bottom: 0.5rem; /* Espaço abaixo do título */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte serifada para um toque elegante */
 }
 
-/* Estilo da Tabela */
+
 table {
     width: 100%;
     border-collapse: collapse;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
     background-color: white;
     margin-top: 2rem;
 }
@@ -103,7 +112,7 @@ th {
 
 td img {
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para as imagens dentro da tabela */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 td a.button {
@@ -123,26 +132,32 @@ td a.button:hover {
     color: #2c6e49;
 }
 
-/* Estilo do Rodapé */
+
 footer {
     background-color: rgba(0, 100, 0, 0.8); /* Cor verde escura com transparência */
     color: white;
-    padding: 15px;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 1rem;
     position: relative;
     bottom: 0;
     width: 100%;
-    z-index: 1;
-    font-size: 0.9rem;
+    z-index: 1; /* Garante que o rodapé fique acima da imagem de fundo */
+    font-size: 0.9rem; /* Tamanho menor para o texto do rodapé */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil para destacar o rodapé */
+    border-top: 5px solid #004d00; /* Borda superior para um efeito mais elegante */
 }
 
-/* Ajustes para dispositivos móveis */
+
 @media (max-width: 768px) {
     header nav a {
-        font-size: 1rem; /* Ajusta o tamanho da fonte dos links */
+        font-size: 1rem; 
     }
 
     main {
         padding: 1rem;
     }
+}
+
+.tabelinha{
+    align-items: center;
 }
