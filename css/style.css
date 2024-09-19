@@ -1,0 +1,139 @@
+/* Estilos gerais */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    min-height: 100vh; /* Garante que o body tenha pelo menos a altura da tela */
+    overflow-x: hidden; /* Evita rolagem horizontal */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contêiner da imagem de fundo */
+body::before {
+    content: "";
+    position: fixed; /* Fixa a imagem no fundo da tela */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../imagens/Zakynthos.-Greece-2.jpg') no-repeat center center; /* Adiciona a imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir toda a área */
+    z-index: -1; /* Coloca a imagem de fundo atrás de todo o conteúdo */
+    filter: brightness(50%); /* Ajusta o brilho da imagem para melhorar a legibilidade do texto */
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: rgba(0, 100, 0, 0.8); /* Cor verde escura com transparência */
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+    z-index: 1; /* Garante que o cabeçalho fique acima da imagem de fundo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra sutil para destacar o cabeçalho */
+    border-bottom: 5px solid #004d00; /* Borda inferior para um efeito mais elegante */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem; /* Tamanho maior do título */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra de texto para mais destaque */
+}
+
+nav {
+    margin-top: 0.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1.5rem;
+    font-weight: bold;
+    font-size: 1.1rem; /* Fonte maior para links de navegação */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Transição suave para cor e sombra dos links */
+}
+
+nav a:hover {
+    color: #ffcc00; /* Cor de destaque ao passar o mouse */
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra de texto para destaque */
+}
+
+/* Estilo do conteúdo principal */
+main {
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com transparência */
+    padding: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    border-radius: 20px; /* Cantos mais arredondados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
+    position: relative;
+    z-index: 1; /* Garante que o conteúdo principal fique acima da imagem de fundo */
+    font-size: 1rem;
+    line-height: 1.6; /* Melhora a legibilidade do texto */
+    flex: 1; /* Faz com que o main ocupe o espaço restante disponível */
+    border: 5px solid #006400; /* Borda verde escura */ /* Gradiente verde */
+}
+
+main h2 {
+    color: #006400; /* Cor verde escura para os títulos */
+    margin-bottom: 1rem;
+    font-size: 2rem; /* Tamanho do título */
+    border-bottom: 3px solid #006400; /* Linha decorativa abaixo do título */
+    padding-bottom: 0.5rem; /* Espaço abaixo do título */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte serifada para um toque elegante */
+}
+
+/* Estilo dos parágrafos */
+main p {
+    margin-bottom: 1.5rem; /* Espaço entre os parágrafos */
+    line-height: 1.8; /* Maior espaçamento entre linhas para melhor legibilidade */
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: rgba(0, 100, 0, 0.8); /* Cor verde escura com transparência */
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    z-index: 1; /* Garante que o rodapé fique acima da imagem de fundo */
+    font-size: 0.9rem; /* Tamanho menor para o texto do rodapé */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil para destacar o rodapé */
+    border-top: 5px solid #004d00; /* Borda superior para um efeito mais elegante */
+}
+
+/* Botões estilizados */
+button {
+    background-color: #006400; /* Cor de fundo verde escura */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar o botão */
+}
+
+button:hover {
+    background-color: #004d00; /* Cor de fundo verde mais escura ao passar o mouse */
+    transform: translateY(-2px); /* Efeito de elevação ao passar o mouse */
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    nav {
+        font-size: 1rem; /* Reduz o tamanho da fonte para dispositivos móveis */
+    }
+
+    main {
+        padding: 1rem;
+        margin: 1rem auto;
+    }
+}
